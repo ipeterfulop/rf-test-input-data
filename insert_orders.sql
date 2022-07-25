@@ -1,46 +1,46 @@
- INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (1,10, TO_DATE('2021/2/16 4:40:51', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (2,10, TO_DATE('2021/7/10 21:7:12', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (3,10, TO_DATE('2021/4/6 18:38:45', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (4,10, TO_DATE('2021/8/22 6:43:30', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (5,10, TO_DATE('2021/3/22 23:4:46', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (6,10, TO_DATE('2021/4/8 8:16:21', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (7,10, TO_DATE('2021/12/8 21:46:17', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (8,10, TO_DATE('2021/12/16 11:48:38', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (9,10, TO_DATE('2021/2/7 21:26:16', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (10,10, TO_DATE('2021/10/4 17:46:11', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (11,10, TO_DATE('2021/8/22 13:29:48', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (12,10, TO_DATE('2021/8/26 23:29:45', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (13,10, TO_DATE('2021/5/19 8:26:13', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (14,10, TO_DATE('2021/6/26 16:53:33', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (15,10, TO_DATE('2021/11/5 23:8:10', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (16,10, TO_DATE('2021/9/20 22:6:48', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (17,10, TO_DATE('2021/5/19 9:46:18', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (18,10, TO_DATE('2021/11/2 5:33:40', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (19,10, TO_DATE('2021/9/18 24:45:29', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (20,10, TO_DATE('2021/10/2 22:41:23', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (21,10, TO_DATE('2021/3/12 12:32:42', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (22,10, TO_DATE('2021/1/6 11:3:35', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (23,10, TO_DATE('2022/3/2 6:10:28', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (24,10, TO_DATE('2022/6/17 20:5:15', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (25,10, TO_DATE('2022/7/11 24:33:23', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (26,10, TO_DATE('2022/2/27 13:18:11', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (27,10, TO_DATE('2022/10/15 4:4:28', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (28,10, TO_DATE('2022/7/2 18:34:22', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (29,10, TO_DATE('2022/10/11 9:41:40', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (30,10, TO_DATE('2022/2/20 1:44:12', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (31,10, TO_DATE('2022/9/13 14:50:40', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (32,10, TO_DATE('2022/12/23 18:25:40', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (33,10, TO_DATE('2022/5/19 7:38:28', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (34,10, TO_DATE('2022/4/5 12:23:18', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (35,10, TO_DATE('2022/4/12 14:12:23', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (36,10, TO_DATE('2022/9/28 24:9:55', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (37,10, TO_DATE('2022/3/10 13:35:55', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (38,10, TO_DATE('2022/5/7 17:31:34', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (39,10, TO_DATE('2022/12/3 24:25:29', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (40,10, TO_DATE('2022/10/12 18:21:10', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (41,10, TO_DATE('2022/1/9 4:8:33', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (42,10, TO_DATE('2022/6/27 19:11:14', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (43,10, TO_DATE('2022/2/9 23:13:10', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (44,10, TO_DATE('2022/10/12 19:23:47', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (45,10, TO_DATE('2022/9/8 3:34:53', 'YYYY/MM/DD HH24:MI:SS')) \n
-   INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (46,10, TO_DATE('2022/6/26 14:31:9', 'YYYY/MM/DD HH24:MI:SS'))
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (1,10, TO_DATE('2021/2/16 4:40:51', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (2,10, TO_DATE('2021/7/10 21:7:12', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (3,10, TO_DATE('2021/4/6 18:38:45', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (4,10, TO_DATE('2021/8/22 6:43:30', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (5,10, TO_DATE('2021/3/22 23:4:46', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (6,10, TO_DATE('2021/4/8 8:16:21', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (7,10, TO_DATE('2021/12/8 21:46:17', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (8,10, TO_DATE('2021/12/16 11:48:38', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (9,10, TO_DATE('2021/2/7 21:26:16', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (10,10, TO_DATE('2021/10/4 17:46:11', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (11,10, TO_DATE('2021/8/22 13:29:48', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (12,10, TO_DATE('2021/8/26 23:29:45', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (13,10, TO_DATE('2021/5/19 8:26:13', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (14,10, TO_DATE('2021/6/26 16:53:33', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (15,10, TO_DATE('2021/11/5 23:8:10', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (16,10, TO_DATE('2021/9/20 22:6:48', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (17,10, TO_DATE('2021/5/19 9:46:18', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (18,10, TO_DATE('2021/11/2 5:33:40', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (19,10, TO_DATE('2021/9/18 24:45:29', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (20,10, TO_DATE('2021/10/2 22:41:23', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (21,10, TO_DATE('2021/3/12 12:32:42', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (22,10, TO_DATE('2021/1/6 11:3:35', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (23,10, TO_DATE('2022/3/2 6:10:28', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (24,10, TO_DATE('2022/6/17 20:5:15', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (25,10, TO_DATE('2022/7/11 24:33:23', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (26,10, TO_DATE('2022/2/27 13:18:11', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (27,10, TO_DATE('2022/10/15 4:4:28', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (28,10, TO_DATE('2022/7/2 18:34:22', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (29,10, TO_DATE('2022/10/11 9:41:40', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (30,10, TO_DATE('2022/2/20 1:44:12', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (31,10, TO_DATE('2022/9/13 14:50:40', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (32,10, TO_DATE('2022/12/23 18:25:40', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (33,10, TO_DATE('2022/5/19 7:38:28', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (34,10, TO_DATE('2022/4/5 12:23:18', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (35,10, TO_DATE('2022/4/12 14:12:23', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (36,10, TO_DATE('2022/9/28 24:9:55', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (37,10, TO_DATE('2022/3/10 13:35:55', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (38,10, TO_DATE('2022/5/7 17:31:34', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (39,10, TO_DATE('2022/12/3 24:25:29', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (40,10, TO_DATE('2022/10/12 18:21:10', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (41,10, TO_DATE('2022/1/9 4:8:33', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (42,10, TO_DATE('2022/6/27 19:11:14', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (43,10, TO_DATE('2022/2/9 23:13:10', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (44,10, TO_DATE('2022/10/12 19:23:47', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (45,10, TO_DATE('2022/9/8 3:34:53', 'YYYY/MM/DD HH24:MI:SS'));
+INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (46,10, TO_DATE('2022/6/26 14:31:9', 'YYYY/MM/DD HH24:MI:SS'));
