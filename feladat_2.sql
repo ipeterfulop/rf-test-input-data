@@ -26,8 +26,8 @@ FROM (SELECT u.ugyfel_azonosito,
                  WHEN NVL(getNormalizaltOrszagNev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
                  ELSE 'Egyeb' END     as orszagbesorolas,
              CASE
-                 WHEN (ugyfeltipus IN ('NAGYVALLALATI', 'KISVALLALATI')) THEN 'NAGYVALLALATI vagy KISVALLALATI'
-                 ELSE ugyfeltipus END as tipusbesorolas
+                 WHEN (ugyfel_tipus IN ('NAGYVALLALATI', 'KISVALLALATI')) THEN 'NAGYVALLALATI vagy KISVALLALATI'
+                 ELSE ugyfel_tipus END as tipusbesorolas
       FROM ugyfel u
       WHERE u.orszag IS NOT NULL
         AND u.eves_jovedelem IS NOT NULL
@@ -37,4 +37,4 @@ FROM (SELECT u.ugyfel_azonosito,
              FROM rendeles
              WHERE EXTRACT(YEAR FROM rendeles_idopontja) = EXTRACT(YEAR FROM SYSDATE))) t
 GROUP BY orszagbesorolas, tipusbesorolas
-ORDER BY orszagbesorolas;
+ORDER BY orszagbesorolas DESC;
