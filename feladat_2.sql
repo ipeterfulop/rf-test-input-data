@@ -20,7 +20,7 @@ END;
 
 
 SELECT orszagbesorolas, tipusbesorolas, AVG(eves_jovedelem)
-FROM (SELECT u.ugyfel_azonosito,
+FROM (`SELECT u.ugyfel_azonosito,
              eves_jovedelem,
              CASE
                  WHEN NVL(getNormalizaltOrszagNev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
@@ -35,6 +35,6 @@ FROM (SELECT u.ugyfel_azonosito,
         AND u.ugyfel_azonosito NOT IN
             (SELECT DISTINCT ugyfel_azonosito
              FROM rendeles
-             WHERE EXTRACT(YEAR FROM rendeles_idopontja) = EXTRACT(YEAR FROM SYSDATE))) t
+             WHERE EXTRACT(YEAR FROM rendeles_idopontja) = EXTRACT(YEAR FROM SYSDATE))`) t
 GROUP BY orszagbesorolas, tipusbesorolas
 ORDER BY orszagbesorolas DESC;
