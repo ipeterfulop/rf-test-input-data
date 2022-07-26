@@ -1,10 +1,10 @@
-CREATE OR REPLACE FUNCTION getNormalizaltOrszagNev(
+CREATE OR REPLACE FUNCTION get_normalizalt_orszag_nev(
     orszagnev VARCHAR2
 ) RETURN VARCHAR2 as
-    normalizaltNev VARCHAR2;
+    normalizalt_nev VARCHAR2(50);
 BEGIN
 
-    normalizaltNev
+    normalizalt_nev
         := LOWER(
             REPLACE(
                     REPLACE(
@@ -15,16 +15,16 @@ BEGIN
                     'Á', 'A')
         );
 
-    return normalizaltNev;
+    return normalizalt_nev;
 END;
 
 
-SELECT orszagbesorolas, tipusbesorolas, AVG(eves_jovedelem)
+SELECT orszagbesorolas, tipusbesorolas, AVG(eves_jovedelem) as atlagjovedelem
 FROM (`SELECT u.ugyfel_azonosito,
              eves_jovedelem,
              CASE
-                 WHEN NVL(getNormalizaltOrszagNev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
-                 ELSE 'Egyeb' END     as orszagbesorolas,
+                 WHEN NVL(get_normalizalt_orszag_nev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
+                 ELSE 'Egyéb' END     as orszagbesorolas,
              CASE
                  WHEN (ugyfel_tipus IN ('NAGYVALLALATI', 'KISVALLALATI')) THEN 'NAGYVALLALATI vagy KISVALLALATI'
                  ELSE ugyfel_tipus END as tipusbesorolas
