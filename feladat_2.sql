@@ -1,22 +1,21 @@
-CREATE
-OR REPLACE FUNCTION getNormalizaltOrszagNev(
-	orszagnev VARCHAR2
-) RETURN VARCHAR2 as 
-	normalizaltNev VARCHAR2;
+CREATE OR REPLACE FUNCTION getNormalizaltOrszagNev(
+    orszagnev VARCHAR2
+) RETURN VARCHAR2 as
+    normalizaltNev VARCHAR2;
 BEGIN
-	
-	normalizaltNev
-:= LOWER (
-		REPLACE(
-			REPLACE(
-					REPLACE(
-						orszagnev, ' ', ''
-						), 
-					'á', 'a'),
-			'Á', 'A')
-		);
 
-return normalizaltNev;
+    normalizaltNev
+        := LOWER(
+            REPLACE(
+                    REPLACE(
+                            REPLACE(
+                                    orszagnev, ' ', ''
+                                ),
+                            'á', 'a'),
+                    'Á', 'A')
+        );
+
+    return normalizaltNev;
 END;
 
 
@@ -24,7 +23,7 @@ SELECT orszagbesorolas, tipusbesorolas, AVG(eves_jovedelem)
 FROM (SELECT u.ugyfel_azonosito,
              eves_jovedelem,
              CASE
-                 WHEN NVL(getnormalizaltorszagnev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
+                 WHEN NVL(getNormalizaltOrszagNev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
                  ELSE 'Egyeb' END     as orszagbesorolas,
              CASE
                  WHEN (ugyfeltipus IN ('NAGYVALLALATI', 'KISVALLALATI')) THEN 'NAGYVALLALATI vagy KISVALLALATI'
@@ -36,5 +35,6 @@ FROM (SELECT u.ugyfel_azonosito,
         AND u.ugyfel_azonosito NOT IN
             (SELECT DISTINCT ugyfel_azonosito
              FROM rendeles
-             WHERE EXTRACT(YEAR FROM rendeles_idopontja) = EXTRACT(YEAR FROM SYSDATE))
-      );
+             WHERE EXTRACT(YEAR FROM rendeles_idopontja) = EXTRACT(YEAR FROM SYSDATE))) t
+GROUP BY orszagbesorolas, tipusbesorolas
+ORDER BY orszagbesorolas;

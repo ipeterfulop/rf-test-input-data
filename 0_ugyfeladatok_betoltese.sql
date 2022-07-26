@@ -34,3 +34,7 @@ INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALU
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (34,'LAKOSSAGI', ' magyarország', 2350000);
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (35,'KISVALLALATI', ' magyarország', 3750000);
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (36,'NAGYVALLALATI', ' magyarország', 7350000);
+INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (37,'LAKOSSAGI', 'Belgium', 2350000);
+INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (38,'KISVALLALATI', 'Ausztria', 3750000);
+INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (39,'NAGYVALLALATI', 'Spanyolország', 7350000);
+
