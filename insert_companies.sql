@@ -6,7 +6,7 @@ INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALU
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (6,'NAGYVALLALATI',' magyarország', NULL);
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (7,'NAGYVALLALATI',NULL, NULL);
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (8,'KISVALLALATI','magyarorszag', 12500000);
-INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (9,'NAGYVALLALATI','Magyarorszag', 15000000;
+INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (9,'NAGYVALLALATI','Magyarorszag', 15000000);
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (10,'NAGYVALLALATI',' magyarország', NULL);
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (11,'LAKOSSAGI',' magyarország', NULL);
 INSERT INTO ugyfel(ugyfel_azonosito, ugyfel_tipus, orszag, eves_jovedelem ) VALUES (12,'NAGYVALLALATI',' magyarország', NULL);
