@@ -923,5 +923,5 @@ INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) V
 INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (930,39, TO_DATE('2021/9/23 14:16:13', 'YYYY/MM/DD HH24:MI:SS')); 
 INSERT INTO rendeles(rendeles_azonosito, ugyfel_azonosito, rendeles_idopontja) VALUES (931,39, TO_DATE('2021/10/23 22:8:40', 'YYYY/MM/DD HH24:MI:SS')); 
 
-
+COMMIT;
 

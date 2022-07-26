@@ -20,7 +20,7 @@ END;
 
 
 SELECT orszagbesorolas, tipusbesorolas, AVG(eves_jovedelem) as atlagjovedelem
-FROM (`SELECT u.ugyfel_azonosito,
+FROM (SELECT u.ugyfel_azonosito,
              eves_jovedelem,
              CASE
                  WHEN NVL(get_normalizalt_orszag_nev(orszag), '') = 'magyarorszag' THEN 'Magyarország'

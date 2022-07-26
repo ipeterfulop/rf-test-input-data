@@ -1,35 +1,54 @@
+**Pályázó**: Fülöp Péter István
+**E-mail**: contact@peterfulop.me
+**Telefon**: +36 30 825-5289
+**Megpályázott pozíció**: Adat Specialista (PL/SQL tudással)
+
+**Tárgy**: Kiválasztási folyamat során kapott feladatok megoldásának beküldése
+` `  
+` `  
+
+### Kedves Rita!
+
+Az alábbiakban küldöm a megoldásaimat az Ön által július 18-án **SQL feladat** címmel  átküldött feladatokra.
+` `  
+` `
 # Bevezető
+Az alábbi PL/SQL kódrészletek Oracle 19c verziójával kompatibilisek.  
+A zip csomag tartalmazza a táblákat létrehozó szkripteket valamint a megoldások ellenőrzéséhez generált bemeneti adatokat is.
+
+` `  
+` `
+## 1. Feladat
+
+**Feladat szövege (eredeti formában)**:
+
+_Készítsen összefoglaló táblázatot a rendelések táblája alapján, amely megmutatja, hogy hány ügyfél volt, akinek tíznél nem volt több rendelése (akár nulla), 
+hánynak volt 11-100 db, és hánynak volt száznál is több rendelése!_
+  
+
+**Javasolt megoldás**:  
 
 
-# 1. Feladat
 ```oracle
-SELECT
-    SUM(CASE WHEN (stat.rendelesek_szama BETWEEN 0 AND 10) THEN 1 ELSE 0 END) as rendelesek_szama_1_es_10_kozott,
-    SUM(CASE WHEN (stat.rendelesek_szama BETWEEN 11 AND 100) THEN 1 ELSE 0 END) as rendelesek_szama_11_es_100_kozott,
-    SUM(CASE WHEN (stat.rendelesek_szama > 100) THEN 1 ELSE 0 END) as rendelesek_szama_100_nal_tobb
-FROM
-    (
-        SELECT
-            u.ugyfel_azonosito,
-            nvl(stat_r.rendelesek_szama_r, 0) AS rendelesek_szama
-        FROM
-            ugyfel u
-                LEFT JOIN (
-                SELECT
-                    ugyfel_azonosito,
-                    COUNT(*) AS rendelesek_szama_r
-                FROM
-                    rendeles
-                GROUP BY
-                    ugyfel_azonosito
-            ) stat_r ON u.ugyfel_azonosito = stat_r.ugyfel_azonosito
-    ) stat;
-```
+SELECT SUM(CASE WHEN (stat.rendelesek_szama BETWEEN 0 AND 10) THEN 1 ELSE 0 END)   as rendelesek_szama_1_es_10_kozott,
+       SUM(CASE WHEN (stat.rendelesek_szama BETWEEN 11 AND 100) THEN 1 ELSE 0 END) as rendelesek_szama_11_es_100_kozott,
+       SUM(CASE WHEN (stat.rendelesek_szama > 100) THEN 1 ELSE 0 END)              as rendelesek_szama_100_nal_tobb
+FROM (SELECT u.ugyfel_azonosito,
+             nvl(stat_r.rendelesek_szama_r, 0) AS rendelesek_szama
+      FROM ugyfel u
+               LEFT JOIN (SELECT ugyfel_azonosito,
+                                 COUNT(*) AS rendelesek_szama_r
+                          FROM rendeles
+                          GROUP BY ugyfel_azonosito) stat_r ON u.ugyfel_azonosito = stat_r.ugyfel_azonosito) stat;
+```  
+` `  
+` `  
+  
+## 2. Feladat
 
-# 2. Feladat
-A csoportosító lekérdezés megírása előtt írtam egy függvényt, amely az ```ugyfel.orszag``` oszlopban a ```Magyarország``` 
-különbőző előfordulásait kezeli, pontosabban a bemenetként kapott karakterláncból törli a szóközöket, 
-illetve cseréli az ékezetes betűket, majd a kapott eredmény karakterláncot kisbetűkre alakítva téríti vissza. 
+A csoportosító lekérdezés megírása előtt írtam egy függvényt, amely az ```ugyfel.orszag``` oszlopban  a ```Magyarország``` szó különbőző előfordulásait kezeli, pontosabban a bemenetként kapott karakterláncból törli a szóközöket,
+illetve cseréli az ékezetes betűket, majd a kapott eredmény karakterláncot kisbetűkre alakítva téríti vissza.
+
 ```oracle
 CREATE OR REPLACE FUNCTION get_normalizalt_orszag_nev(
     orszagnev VARCHAR2
@@ -51,27 +70,112 @@ BEGIN
     return normalizalt_nev;
 END;
 ```
-  
-Ezen függvény felhasználásával 
+
+Ezen függvény felhasználásával a 2. feladatra javasolt megoldásom:  
 
 ```oracle
 SELECT orszagbesorolas, tipusbesorolas, AVG(eves_jovedelem) as atlagjovedelem
 FROM (`SELECT u.ugyfel_azonosito,
-             eves_jovedelem,
-             CASE
-                 WHEN NVL(getNormalizaltOrszagNev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
-                 ELSE 'Egyéb' END     as orszagbesorolas,
-             CASE
-                 WHEN (ugyfel_tipus IN ('NAGYVALLALATI', 'KISVALLALATI')) THEN 'NAGYVALLALATI vagy KISVALLALATI'
-                 ELSE ugyfel_tipus END as tipusbesorolas
-      FROM ugyfel u
-      WHERE u.orszag IS NOT NULL
-        AND u.eves_jovedelem IS NOT NULL
-        AND u.ugyfel_azonosito IN (SELECT DISTINCT ugyfel_azonosito FROM rendeles)
-        AND u.ugyfel_azonosito NOT IN
-            (SELECT DISTINCT ugyfel_azonosito
-             FROM rendeles
-             WHERE EXTRACT(YEAR FROM rendeles_idopontja) = EXTRACT(YEAR FROM SYSDATE))`) t
+              eves_jovedelem,
+              CASE
+                  WHEN NVL(getNormalizaltOrszagNev(orszag), '') = 'magyarorszag' THEN 'Magyarország'
+                  ELSE 'Egyéb' END      as orszagbesorolas,
+              CASE
+                  WHEN (ugyfel_tipus IN ('NAGYVALLALATI', 'KISVALLALATI')) THEN 'NAGYVALLALATI vagy KISVALLALATI'
+                  ELSE ugyfel_tipus END as tipusbesorolas
+       FROM ugyfel u
+       WHERE u.orszag IS NOT NULL
+         AND u.eves_jovedelem IS NOT NULL
+         AND u.ugyfel_azonosito IN (SELECT DISTINCT ugyfel_azonosito FROM rendeles)
+         AND u.ugyfel_azonosito NOT IN
+             (SELECT DISTINCT ugyfel_azonosito
+              FROM rendeles
+              WHERE EXTRACT(YEAR FROM rendeles_idopontja) = EXTRACT(YEAR FROM SYSDATE))
+           `) t
 GROUP BY orszagbesorolas, tipusbesorolas
 ORDER BY orszagbesorolas DESC;
+```  
+  
+
+## 3. feladat
+**Feladat szövege (eredeti formában)**:
+_Egészítse ki az UGYFEL táblát új rekordokkal oly módon, minden magyarországi ügyfél legyen újra betöltve ezúttal mint meseországi ügyfél, az eredeti ügyféltípussal,  de kétszer annyi éves jövedelemmel. Az új ügyfelek azonosítói a legmagasabb eddigi ügyfél azonosítótól számítva legyenek egyesével növekvõk. Lehetõség szerint procedúrával oldja meg a frissítést!_
+
+E feladat esetén első lépésben biztosítanom kellett, hogy az ```ugyfel.ugyfel_azonosito``` IDENTITY oszlop értékeit a
+rendszer úgy generálja, hogy új sor beszúrásakor mindig megnézni a táblában használt legnagyobb értéket és ezt 1-gyel növeli. Ezt az alábbi
+paranccsal valósítottam meg:
+
+```oracle
+ALTER TABLE ugyfel
+    MODIFY ugyfel_azonosito GENERATED BY DEFAULT ON NULL AS IDENTITY (START WITH LIMIT VALUE);
+```  
+
+Ezt követően írtam egy tárolt eljárást a sorok átnásolására. Felhasználtam a 2-es feladatnál írt ```get_normalizalt_orszag_nev``` függvényt.
+
+```oracle  
+CREATE OR REPLACE PROCEDURE sp_ugyfelek_masolasa_meseorszagba
+AS
+BEGIN
+    FOR r IN (select * from ugyfel where get_normalizalt_orszag_nev(orszag) = 'magyarorszag')
+        LOOP
+            r.orszag  := 'Meseország';
+            r.eves_jovedelem  := 2*r.eves_jovedelem;
+            INSERT INTO ugyfel (ugyfel_tipus, orszag, eves_jovedelem VALUES (r.ugyfel_azonosito, r.orszag, r.eves_jovedelem));
+        END LOOP;
+END;
+```
+` `  
+` `  
+## 4. feladat
+**4.1-es  részfeladat**:  
+_Adja meg minden ügyfél azonosítóra, hogy egyrészt hány nap telt el a két idõben egymáshoz legközelebbi rendelése (tehát nem feltétlenül a két legutolsó) közt;_  
+` `  
+**Javasolt megoldás**:  
+```oracle
+SELECT
+    stat.ugyfel_azonosito,
+    MIN(stat.eltelt_teljes_napok_szama)
+FROM
+    (
+        SELECT
+            r1.ugyfel_azonosito,
+            abs(trunc(r1.rendeles_idopontja - r2.rendeles_idopontja)) AS eltelt_teljes_napok_szama
+        FROM
+            rendeles   r1,
+            rendeles   r2
+        WHERE
+            r1.ugyfel_azonosito = r2.ugyfel_azonosito
+          AND ( r1.rendeles_azonosito <> r2.rendeles_azonosito )
+    ) stat
+GROUP BY
+    stat.ugyfel_azonosito
+```
+
+**4.2-es részfeladat**:  
+
+_...másrészt az ügyfél aktív idõszakában, vagyis az elsõ és az utolsó rendelése közötti idõben átlagosan hány hetente adott fel rendelést;
+továbbá, hogy az ügyfél rendeléseinek darabszáma hány százalékát teszi ki az összes rendelés darabszámának, két tizedesre kerekítve._ 
+
+```oracle
+SELECT
+    atlagos_ido.ugyfel_azonosito,
+    atlagos_ido_hetekben_ket_rendeles_kozott,
+    round(100 * ugyfel_rendeleseinek_szama / osszes_rendeles_szama, 2) AS ugyfelrendelesek_es_osszes_rendeles_szazalekos_aranya
+FROM
+    (
+        SELECT
+            ugyfel_azonosito,
+            trunc(((MAX(rendeles_idopontja) - MIN(rendeles_idopontja)) / 7) / COUNT(*)) atlagos_ido_hetekben_ket_rendeles_kozott,
+            COUNT(*) AS ugyfel_rendeleseinek_szama
+        FROM
+            rendeles r
+        GROUP BY
+            ugyfel_azonosito
+    ) atlagos_ido,
+    (
+        SELECT
+            COUNT(*) osszes_rendeles_szama
+        FROM
+            rendeles
+    ) stat
 ```
